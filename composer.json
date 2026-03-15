@@ -4,12 +4,14 @@
   "type": "project",
   "require": {
     "php": "8.2.*",
+    "ext-mongodb": "*",
     "predis/predis": "^2.0",
     "mongodb/mongodb": "^2.0"
   },
   "config": {
     "platform": {
-      "php": "8.2.12"
+      "php": "8.2.12",
+      "ext-mongodb": "2.2.1"
     }
   }
 }
