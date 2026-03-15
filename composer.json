@@ -1,0 +1,10 @@
+{
+  "name": "guvi/internship-project",
+  "description": "GUVI Internship Project",
+  "type": "project",
+  "require": {
+    "php": ">=7.4",
+    "predis/predis": "^2.0",
+    "mongodb/mongodb": "^2.0"
+  }
+}

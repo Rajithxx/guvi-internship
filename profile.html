@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile | GUVI Internship</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 100 100" class="me-2">
+        <circle cx="50" cy="50" r="48" fill="#fff"/>
+        <text x="50" y="65" font-size="40" text-anchor="middle" fill="#4f46e5" font-family="Arial" font-weight="bold">G</text>
+      </svg>
+      GUVI Profile
+    </a>
+    <button id="logoutBtn" class="btn btn-outline-light btn-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h6a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 12.5 2h-6A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+      </svg>
+      Logout
+    </button>
+  </div>
+</nav>
+<div class="container py-5">
+  <div id="alertBox" class="alert d-none" role="alert"></div>
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow p-4">
+        <div class="text-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="#e0e7ff"/>
+            <circle cx="50" cy="38" r="18" fill="#4f46e5"/>
+            <ellipse cx="50" cy="80" rx="28" ry="18" fill="#4f46e5"/>
+          </svg>
+          <h4 class="mt-2 fw-bold" id="profileName">Loading...</h4>
+          <p class="text-muted" id="profileEmail">...</p>
+        </div>
+        <hr/>
+        <h5 class="fw-bold mb-3">Update Profile Details</h5>
+        <div id="profileForm">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Age</label>
+              <input type="number" id="age" class="form-control" placeholder="e.g. 22" min="1" max="120"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Date of Birth</label>
+              <input type="date" id="dob" class="form-control"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Contact Number</label>
+              <input type="tel" id="contact" class="form-control" placeholder="e.g. +91 9876543210"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">City</label>
+              <input type="text" id="city" class="form-control" placeholder="e.g. Chennai"/>
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-semibold">Bio</label>
+              <textarea id="bio" class="form-control" rows="3" placeholder="Tell us about yourself..."></textarea>
+            </div>
+          </div>
+          <button id="updateBtn" class="btn btn-primary w-100 fw-bold mt-4">
+            <span id="btnText">Update Profile</span>
+            <span id="btnSpinner" class="spinner-border spinner-border-sm d-none ms-2"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

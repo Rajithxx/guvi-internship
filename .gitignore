@@ -1,0 +1,10 @@
+# Ignore vendor folder (composer packages)
+vendor/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore PHP error logs
+*.log
+php_errors.log
