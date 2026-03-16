@@ -32,7 +32,7 @@ function validateSession($token) {
 
 // ── Helper: MongoDB connection ────────────────────────────────────────
 function getMongoCollection() {
-    $client = new MongoDB\Client("mongodb://127.0.0.1:27017");
+    $client = new MongoDB\Client("mongodb+srv://rufusrajith_db_user:zWey7hY8TB37aTtl@cluster0.eo3mzuf.mongodb.net/?appName=Cluster0");
     return $client->guvi_internship->user_profiles;
 }
 
