@@ -21,9 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     if ($token) {
         try {
             $redis = new Predis\Client([
-                'scheme' => 'tcp',
-                'host'   => '127.0.0.1',
-                'port'   => 6379,
+                'scheme'   => 'tcp',
+                'host'     => 'ballast.proxy.rlwy.net',
+                'port'     => 54155,
+                'password' => 'nbFMhWITclrhrFQtoFwFNDuRpxrZgDvv',
             ]);
             $redis->del('session:' . $token);
         } catch (Exception $e) {
@@ -93,9 +94,10 @@ $sessionToken = bin2hex(random_bytes(32));
 // Store session in Redis (24 hours)
 try {
     $redis = new Predis\Client([
-        'scheme' => 'tcp',
-        'host'   => '127.0.0.1',
-        'port'   => 6379,
+        'scheme'   => 'tcp',
+        'host'     => 'ballast.proxy.rlwy.net',
+        'port'     => 54155,
+        'password' => 'nbFMhWITclrhrFQtoFwFNDuRpxrZgDvv',
     ]);
 
     $sessionData = json_encode([

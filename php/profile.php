@@ -18,9 +18,10 @@ function validateSession($token) {
     if (empty($token)) return false;
     try {
         $redis = new Predis\Client([
-            'scheme' => 'tcp',
-            'host'   => '127.0.0.1',
-            'port'   => 6379,
+            'scheme'   => 'tcp',
+            'host'     => 'ballast.proxy.rlwy.net',
+            'port'     => 54155,
+            'password' => 'nbFMhWITclrhrFQtoFwFNDuRpxrZgDvv',
         ]);
         $sessionData = $redis->get('session:' . $token);
         return $sessionData ? json_decode($sessionData, true) : false;
