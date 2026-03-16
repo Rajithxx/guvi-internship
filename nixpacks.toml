@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ["php82", "php82Extensions.mongodb", "php82Extensions.redis", "apacheHttpd"]
+nixPkgs = ["php82", "php82Extensions.mongodb", "php82Extensions.redis", "php82Extensions.mysqli", "php82Extensions.pdo_mysql"]
 
 [phases.install]
 cmds = ["composer install --no-dev --optimize-autoloader"]
 
 [start]
-cmd = "apache2ctl -D FOREGROUND"
+cmd = "php -S 0.0.0.0:8080 -t /app"
