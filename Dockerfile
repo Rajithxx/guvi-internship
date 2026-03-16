@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     libzip-dev \
+    libssl-dev \
+    openssl \
     && docker-php-ext-install zip mysqli pdo pdo_mysql \
     && rm -rf /var/lib/apt/lists/*
 

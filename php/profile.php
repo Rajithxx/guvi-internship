@@ -32,7 +32,18 @@ function validateSession($token) {
 
 // ── Helper: MongoDB connection ────────────────────────────────────────
 function getMongoCollection() {
-    $client = new MongoDB\Client("mongodb+srv://rufusrajith_db_user:zWey7hY8TB37aTtl@cluster0.eo3mzuf.mongodb.net/?appName=Cluster0");
+    $client = new MongoDB\Client(
+        "mongodb+srv://rufusrajith_db_user:zWey7hY8TB37aTtl@cluster0.eo3mzuf.mongodb.net/?appName=Cluster0",
+        [],
+        [
+            'driver' => [
+                'name' => 'mongo-php-driver',
+            ],
+            'ssl' => true,
+            'tls' => true,
+            'tlsAllowInvalidCertificates' => true,
+        ]
+    );
     return $client->guvi_internship->user_profiles;
 }
 
