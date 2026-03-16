@@ -51,12 +51,13 @@ if (empty($email) || empty($password)) {
 }
 
 // MySQL Connection
-$host   = 'localhost';
-$dbname = 'guvi_internship';
+$host   = 'shinkansen.proxy.rlwy.net';
+$dbname = 'railway';
 $dbuser = 'root';
-$dbpass = '';
+$dbpass = 'wGgfwSfOKuMQPteqjXbEhMnksrzgkbNr';
+$port   = 43353;
 
-$conn = new mysqli($host, $dbuser, $dbpass, $dbname);
+$conn = new mysqli($host, $dbuser, $dbpass, $dbname, $port);
 
 if ($conn->connect_error) {
     echo json_encode(['status' => 'error', 'message' => 'Database connection failed']);
